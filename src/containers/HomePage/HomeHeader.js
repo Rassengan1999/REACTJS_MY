@@ -5,19 +5,20 @@ import './HomeHeader.scss'
 import logo from '../../assets/images/logo.svg'
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils';
-import { changeLanguageApp } from '../../store/actions'
-import { lang } from 'moment/moment';
+import { changeLanguageApp } from '../../store/actions';
+
 
 class HomeHeader extends Component {
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language)
         //fire redux event: actions
+
     }
     render() {
 
 
         let language = this.props.language;
-        console.log('check language: ', language)
+
         return (
             <React.Fragment>
                 <div className='home-header-container'>
@@ -115,6 +116,7 @@ class HomeHeader extends Component {
 const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo,
         language: state.app.language,
     };
 };

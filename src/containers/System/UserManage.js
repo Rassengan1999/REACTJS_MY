@@ -53,8 +53,10 @@ class UserManage extends Component {
             let response = await createNewUserService(data);
             if (response && response.errCode != 0) {
                 alert(response.errMessage)
+
             } else {
                 await this.getAllUsersFromReact();
+                alert('Create new user success')
                 this.setState({
                     isOpenModalUser: false
                 })

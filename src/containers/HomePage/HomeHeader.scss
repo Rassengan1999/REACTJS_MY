@@ -70,13 +70,14 @@
 
             .language-vi {
                 cursor: pointer;
+
                 opacity: 0.2;
 
                 &.active {
                     opacity: 1;
 
                     span {
-                        color: orange;
+                        color: rgb(235, 86, 17);
                     }
 
                 }
